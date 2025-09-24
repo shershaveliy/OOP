@@ -1,0 +1,3 @@
+C:/Users/savva/Desktop/MAI/OOP/labs/test/CMakeFiles/my_app.dir
+C:/Users/savva/Desktop/MAI/OOP/labs/test/CMakeFiles/edit_cache.dir
+C:/Users/savva/Desktop/MAI/OOP/labs/test/CMakeFiles/rebuild_cache.dir
