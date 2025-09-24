@@ -1,3 +1,12 @@
 
 # Игнорировать vcpkg
 vcpkg/
+
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
