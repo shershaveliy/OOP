@@ -1,6 +1,8 @@
 
 # Игнорировать vcpkg
 vcpkg/
+build/
+win.txt
 
 *.exe
 *.out
