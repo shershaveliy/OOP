@@ -1,30 +1,14 @@
 #include <iostream>
 #include <cmath>
+#include "include/func.h"
 
-bool is_perfect_square(int x) {
-    int root = sqrt(x);
-    return root * root == x;
-}
-
-bool closest_pair_tonum(int v, int &m, int &n) {
-    for (m = v - 1; m > 0; m--) {
-        for (n = m - 1; n > 0; n--) {
-            if (is_perfect_square(m + n) && is_perfect_square(m - n)) {
-                return true;
-            }
-        }
-    }
-    m = 0;
-    n = 0;
-    return false;
-}
 
 int main() {
     int v, m, n;
     std::cout << "Введите верхнюю границу: ";
     std::cin >> v;
     if(v <= 0){
-        std::cout << "Число должны быть положительным";
+        std::cout << "Число должны быть положительным" << std::endl;
         return 1;
     }
     
