@@ -1,31 +1,37 @@
 #include <iostream>
 #include <cmath>
 
-// Функция для проверки, является ли число полным квадратом
-bool is_perfect_square(int num) {
-    int root = sqrt(num);
-    return root * root == num;
+bool is_perfect_square(int x) {
+    int root = sqrt(x);
+    return root * root == x;
 }
 
-// Функция для поиска ближайшей пары чисел
-std::pair<int, int> closest_pair_tonum(int upper_limit) {
-    for (int m = upper_limit - 1; m > 0; m--) {
-        for (int n = m - 1; n > 0; n--) {
+bool closest_pair_tonum(int v, int &m, int &n) {
+    for (m = v - 1; m > 0; m--) {
+        for (n = m - 1; n > 0; n--) {
             if (is_perfect_square(m + n) && is_perfect_square(m - n)) {
-                return {m, n};
+                return true;
             }
         }
     }
-    return {0, 0}; // Если пара не найдена
+    m = 0;
+    n = 0;
+    return false;
 }
 
 int main() {
-    int upper_limit;
+    int v, m, n;
     std::cout << "Введите верхнюю границу: ";
-    std::cin >> upper_limit;
+    std::cin >> v;
+    if(v <= 0){
+        std::cout << "Число должны быть положительным";
+        return 1;
+    }
     
-    auto result = closest_pair_tonum(upper_limit);
-    std::cout << "Ближайшая пара: (" << result.first << ", " << result.second << ")" << std::endl;
+    if (closest_pair_tonum(v, m, n)) {
+        std::cout << "Ближайшая пара: (" << m << ", " << n << ")" << std::endl;
+    }
+    else std::cout << "Пара не найдена" << std::endl;
     
     return 0;
 }
