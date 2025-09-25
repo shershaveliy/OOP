@@ -2,6 +2,7 @@
 # Игнорировать vcpkg
 vcpkg/
 build/
+test/
 win.txt
 
 *.exe
