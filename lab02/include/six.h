@@ -11,10 +11,10 @@ private:
 
 public:
     Six();
-    Six(const size_t& n, unsigned char t = 0);
-    Six(const std::initializer_list<unsigned char>& t);
-    Six(const std::string& t);
-    Six(const Six& other);
+    Six(const size_t &n, unsigned char t = 0);
+    Six(const std::initializer_list<unsigned char> &t);
+    Six(const std::string &t);
+    Six(const Six &other);
     Six(Six&& other) noexcept;
     virtual ~Six() noexcept;
 
@@ -28,6 +28,8 @@ public:
     bool equals(const Six& other) const;
     bool greaterThan(const Six& other) const;
     bool lessThan(const Six& other) const;
+
+    void print() const;
 };
 
 #endif
